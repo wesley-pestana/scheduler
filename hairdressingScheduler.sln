@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HairdressingSchedule", "hairdressingSchedule\HairdressingSchedule.csproj", "{112A446D-FFC2-4E9D-8DD3-5510E5DDFF3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryScheduler", "ClassLibraryScheduler\ClassLibraryScheduler.csproj", "{2DBA140A-4B90-44E4-8597-92283F0DA422}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{112A446D-FFC2-4E9D-8DD3-5510E5DDFF3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{112A446D-FFC2-4E9D-8DD3-5510E5DDFF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{112A446D-FFC2-4E9D-8DD3-5510E5DDFF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{112A446D-FFC2-4E9D-8DD3-5510E5DDFF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBA140A-4B90-44E4-8597-92283F0DA422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBA140A-4B90-44E4-8597-92283F0DA422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBA140A-4B90-44E4-8597-92283F0DA422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBA140A-4B90-44E4-8597-92283F0DA422}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7D7B30F-426C-4C6F-BD08-D5FF8540DB2F}
+	EndGlobalSection
+EndGlobal
