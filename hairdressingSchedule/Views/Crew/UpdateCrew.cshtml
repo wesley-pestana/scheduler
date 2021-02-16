@@ -1,0 +1,39 @@
+﻿@using ClassLibraryScheduler.Model
+@model List<ModelHairdresserCrew>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="jumbotron">
+    <div>
+        <h2>Atualizar Equipe de Cabeleleiros</h2>
+        <form method="post">
+            @foreach (var Crew in Model)
+            {
+                <div class="form-group" hidden>
+                    <label>Id:</label>
+                    <input type="number" class="form-control" value="@Crew.Id" name="UpdId" />
+                </div>
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" value="@Crew.Name" name="UpdName" />
+                </div>
+                <div class="form-group">
+                    <label>Endereço:</label>
+                    <input type="text" class="form-control" value="@Crew.Address" name="UpdAddress" />
+                </div>
+                <div class="form-group">
+                    <label>Telefone:</label>
+                    <input type="number" class="form-control" value="@Crew.Phone" name="UpdPhone" />
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" class="form-control" value="@Crew.Email" name="UpdEmail" />
+                </div>
+            }
+
+            <button type="submit" class="btn-info">Salvar</button>
+        </form>        
+    </div>
+</div>

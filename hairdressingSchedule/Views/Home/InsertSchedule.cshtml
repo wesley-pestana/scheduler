@@ -1,0 +1,61 @@
+﻿@using ClassLibraryScheduler.Model
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var ViewBagClient = ViewBag.listclient;
+    var ViewBagCrew = ViewBag.listcrew;
+}
+
+
+    <div class="jumbotron">
+        <div>
+            <h2>Agendamento de Horario</h2>
+
+            <form method="post">
+
+                <div class="form-group">
+                    <label>Cliente:</label>
+                    <select class="form-control selectpicker" name="searchClientId">
+                        <option selected="">Cliente</option>
+                        @foreach (var listclient in ViewBagClient)
+                        {
+                            <option value="@listclient.Id">@listclient.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Funcionario:</label>
+                    <select class="form-control selectpicker" name="searchCrewId">
+                        <option selected="">Funcionario</option>
+                        @foreach (var listcrew in ViewBagCrew)
+                        {
+                            <option value="@listcrew.Id">@listcrew.Name</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Inicio:</label>
+                    <input type="datetime-local" id="meeting-time"
+                           name="InsStartTime">
+                </div>
+
+                <div class="form-group">
+                    <label>Fim:</label>
+                    <input type="datetime-local" id="meetingtime"
+                           name="InsEndTime">
+                </div>
+
+                <button type="submit" class="btn-info">Salvar</button>
+            </form>
+        </div>
+        <!--<script type="text/javascript" language="javascript">
+
+    function getDate() {
+        document.getElementById('date').innerText = Date().toString();
+    }
+
+    </script>-->
+    </div>

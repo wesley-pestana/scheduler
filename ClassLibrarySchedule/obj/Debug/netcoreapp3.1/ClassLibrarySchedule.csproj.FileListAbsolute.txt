@@ -1,0 +1,5 @@
+C:\Users\User\source\repos\hairdressing schedule\ClassLibrarySchedule\bin\Debug\netcoreapp3.1\ClassLibrarySchedule.deps.json
+C:\Users\User\source\repos\hairdressing schedule\ClassLibrarySchedule\bin\Debug\netcoreapp3.1\ClassLibrarySchedule.dll
+C:\Users\User\source\repos\hairdressing schedule\ClassLibrarySchedule\obj\Debug\netcoreapp3.1\ClassLibrarySchedule.csprojAssemblyReference.cache
+C:\Users\User\source\repos\hairdressing schedule\ClassLibrarySchedule\obj\Debug\netcoreapp3.1\ClassLibrarySchedule.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\hairdressing schedule\ClassLibrarySchedule\obj\Debug\netcoreapp3.1\ClassLibrarySchedule.AssemblyInfo.cs

@@ -1,0 +1,32 @@
+﻿@using ClassLibraryScheduler.Model
+@model List<ModelClient>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="jumbotron">
+    <div>
+        <h2>Cadastrar Novo Cabeleleiro</h2>
+        <form method="post">
+            <div class="form-group">
+                <label>Nome:</label>
+                <input type="text" class="form-control" placeholder="Insira o nome do Cabeleleiro" name="InsName" />
+            </div>
+            <div class="form-group">
+                <label>Endereço:</label>
+                <input type="text" class="form-control" placeholder="Insira o endereço do Cabeleleiro" name="InsAddress" />
+            </div>
+            <div class="form-group">
+                <label>Telefone:</label>
+                <input type="text" class="form-control" placeholder="Insira o Telefone do Cabeleleiro" name="InsPhone" />
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" class="form-control" placeholder="Insira o Email do Cabeleleiro" name="InsEmail" />
+            </div>
+
+            <button type="submit" class="btn-info">Salvar</button>
+        </form>        
+    </div>
+</div>

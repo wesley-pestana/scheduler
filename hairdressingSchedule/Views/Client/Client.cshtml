@@ -1,0 +1,39 @@
+﻿@using ClassLibraryScheduler.Model
+@model List<ModelClient>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="jumbotron">        
+
+        <h2>Cliente</h2>
+        <form method="post">
+            <label>Procurar Cliente pelo Nome:</label>
+            <input type="text" name="FindClient" />
+            <button type="submit">Buscar</button>
+        </form>
+
+        <table class="table">
+            <tr>
+                <td>Nome</td>
+                <td>Endereço</td>
+                <td>Telefone</td>
+                <td>Email</td>
+                <td>Atualizar</td>
+                <td>Deletar</td>
+            </tr>
+            @foreach (var clients in Model)
+            {
+                <tr>
+                    <td>@clients.Name</td>
+                    <td>@clients.Address</td>
+                    <td>@clients.Phone</td>
+                    <td>@clients.Email</td>
+                    <td><a href="/Client/@clients.Id/UpdateClient">Atualizar</a></td>
+                    <td><a href="/Client/@clients.Id/DeleteClient">Deletar</a></td>
+                </tr>
+            }
+        </table><br />
+        <p><a class="btn btn-primary btn-lg active" href="/Client/InsertClient">Cadastrar cliente</a></p>
+    </div>

@@ -1,0 +1,39 @@
+﻿@using ClassLibraryScheduler.Model
+@model List<ModelClient>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="jumbotron">
+    <div>
+        <h2>Atualizar Cliente</h2>
+        <form method="post">
+            @foreach (var Client in Model)
+            {
+                <div class="form-group" hidden>
+                    <label>Id:</label>
+                    <input type="number" class="form-control" value="@Client.Id" name="UpdId" />
+                </div>
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" value="@Client.Name" name="UpdName" />
+                </div>
+                <div class="form-group">
+                    <label>Endereço:</label>
+                    <input type="text" class="form-control" value="@Client.Address" name="UpdAddress" />
+                </div>
+                <div class="form-group">
+                    <label>Telefone:</label>
+                    <input type="number" class="form-control" value="@Client.Phone" name="UpdPhone" />
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" class="form-control" value="@Client.Email" name="UpdEmail" />
+                </div>
+            }
+
+            <button type="submit" class="btn-info">Salvar</button>
+        </form>        
+    </div>
+</div>

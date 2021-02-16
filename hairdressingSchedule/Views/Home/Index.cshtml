@@ -1,0 +1,51 @@
+﻿@using ClassLibraryScheduler.Model
+@model ModelCalendarEvent
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8' />
+    <link href='~/Content/main.min.css' rel='stylesheet' />
+    <link href='~/Content/calendar.css' rel='stylesheet' />
+    <script src='~/Scripts/main.min.js'></script>
+    <script src='~/Scripts/locales-all.min.js'></script>
+    <script class="container">
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                locale: 'pt-br',
+                initialView: 'timeGridWeek',
+                nowIndicator: true,
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                navLinks: true, // can click day/week names to navigate views
+                editable: false,
+                selectable: false,
+                selectMirror: true,
+                dayMaxEvents: true, // allow "more" link when too many events
+
+                events: '@Url.RouteUrl(new{ action="GetEvents", controller="Home"})'
+
+            });
+
+            calendar.render();
+        });
+
+    </script>
+
+</head>
+<body>
+    <p><a class="btn btn-primary btn-lg active" href="/Home/InsertSchedule">Agendar Horario</a></p>
+    <div id='calendar'></div>
+
+</body>
+</html>

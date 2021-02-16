@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\hairdressing schedule\ClassLibraryScheduler\bin\Debug\ClassLibraryScheduler.dll
+C:\Users\User\source\repos\hairdressing schedule\ClassLibraryScheduler\bin\Debug\ClassLibraryScheduler.pdb
+C:\Users\User\source\repos\hairdressing schedule\ClassLibraryScheduler\obj\Debug\ClassLibraryScheduler.dll
+C:\Users\User\source\repos\hairdressing schedule\ClassLibraryScheduler\obj\Debug\ClassLibraryScheduler.pdb
+C:\Users\User\source\repos\hairdressing schedule\ClassLibraryScheduler\obj\Debug\ClassLibraryScheduler.csprojAssemblyReference.cache
+C:\Users\User\source\repos\hairdressingSchedule\ClassLibraryScheduler\bin\Debug\ClassLibraryScheduler.dll
+C:\Users\User\source\repos\hairdressingSchedule\ClassLibraryScheduler\bin\Debug\ClassLibraryScheduler.pdb
+C:\Users\User\source\repos\hairdressingSchedule\ClassLibraryScheduler\obj\Debug\ClassLibraryScheduler.csprojAssemblyReference.cache
+C:\Users\User\source\repos\hairdressingSchedule\ClassLibraryScheduler\obj\Debug\ClassLibraryScheduler.dll
+C:\Users\User\source\repos\hairdressingSchedule\ClassLibraryScheduler\obj\Debug\ClassLibraryScheduler.pdb
