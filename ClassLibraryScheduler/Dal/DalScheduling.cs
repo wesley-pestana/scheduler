@@ -13,83 +13,91 @@ namespace ClassLibraryScheduler.Dal
 
         public List<ModelScheduling> Schedules()
         {
-            List<ModelScheduling> ReturnList = new List<ModelScheduling>();
-            using(SqlConnection connection = new SqlConnection(ConnectionString))
+            try
             {
-                using(SqlCommand command = connection.CreateCommand())
+                List<ModelScheduling> ReturnList = new List<ModelScheduling>();
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    connection.Open();
-                    command.CommandText = "SP_ListSchesules";
-                    command.CommandType = CommandType.StoredProcedure;
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    while (reader.Read())
+                    using (SqlCommand command = connection.CreateCommand())
                     {
-                        ModelScheduling schedule = new ModelScheduling()
+                        connection.Open();
+                        command.CommandText = "SP_ListSchesules";
+                        command.CommandType = CommandType.StoredProcedure;
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        while (reader.Read())
                         {
-                            ClientName = reader["Name"].ToString(),
-                            CrewName = reader["Name"].ToString(),
-                            Title = reader["Title"].ToString(),
-                            ScheduledStart = Convert.ToDateTime(reader["ScheduledStart"]),
-                            ScheduledEnd = Convert.ToDateTime(reader["ScheduledEnd"])
-                        };
-                        ReturnList.Add(schedule);
+                            ModelScheduling schedule = new ModelScheduling()
+                            {
+                                ClientName = reader["Name"].ToString(),
+                                CrewName = reader["Name"].ToString(),
+                                Title = reader["Title"].ToString(),
+                                ScheduledStart = Convert.ToDateTime(reader["ScheduledStart"]),
+                                ScheduledEnd = Convert.ToDateTime(reader["ScheduledEnd"])
+                            };
+                            ReturnList.Add(schedule);
+                        }
                     }
                 }
-            }return ReturnList;
+                return ReturnList;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }            
         }
 
         public void InsertSchedule(ModelScheduling model)
         {
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            try
             {
-                using (SqlCommand command = connection.CreateCommand())
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    connection.Open();
-                    command.CommandText = "SP_InsertScheduledTime";
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("ClientId", model.ClientId);
-                    command.Parameters.AddWithValue("CrewId", model.CrewId);
-                    command.Parameters.AddWithValue("Title", model.Title);
-                    command.Parameters.AddWithValue("ScheduledStart", model.ScheduledStart);
-                    command.Parameters.AddWithValue("ScheduledEnd", model.ScheduledEnd);
-                    command.ExecuteNonQuery();
+                    using (SqlCommand command = connection.CreateCommand())
+                    {
+                        connection.Open();
+                        command.CommandText = "SP_InsertScheduledTime";
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("ClientId", model.ClientId);
+                        command.Parameters.AddWithValue("CrewId", model.CrewId);
+                        command.Parameters.AddWithValue("Title", model.Title);
+                        command.Parameters.AddWithValue("ScheduledStart", model.ScheduledStart);
+                        command.Parameters.AddWithValue("ScheduledEnd", model.ScheduledEnd);
+                        command.ExecuteNonQuery();
+                    }
                 }
             }
-        }
+            catch (Exception)
+            {
 
-        /*public void UpdateSchedule(ModelScheduling model)
-        {
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            {
-                using (SqlCommand command = connection.CreateCommand())
-                {
-                    connection.Open();
-                    command.CommandText = "SP_InsertScheduledTime";
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("ClientName", model.ClientId);
-                    command.Parameters.AddWithValue("CrewName", model.CrewId);
-                    command.Parameters.AddWithValue("Title", model.Title);
-                    command.Parameters.AddWithValue("ScheduledStart", model.ScheduledStart);
-                    command.Parameters.AddWithValue("ScheduledEnd", model.ScheduledEnd);
-                    command.ExecuteNonQuery();
-                }
+                throw;
             }
-        }*/
+            
+        }
 
         public void DeleteSchedule(int Id)
         {
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            try
             {
-                using (SqlCommand command = connection.CreateCommand())
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {
-                    connection.Open();
-                    command.CommandText = "SP_DeleteScheduledTime";
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("Id",Id);
-                    command.ExecuteNonQuery();
+                    using (SqlCommand command = connection.CreateCommand())
+                    {
+                        connection.Open();
+                        command.CommandText = "SP_DeleteScheduledTime";
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("Id", Id);
+                        command.ExecuteNonQuery();
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
     }
 }
