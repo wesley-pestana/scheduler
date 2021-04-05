@@ -4,12 +4,13 @@ using System.Text;
 using ClassLibraryScheduler.Model;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace ClassLibraryScheduler.Dal
 {
     public class DalScheduling
     {
-        const string ConnectionString = @"Data Source=WINDEV2002EVAL\SQLEXPRESS;Initial Catalog=Estudos;Integrated Security=True";
+        string ConnectionString = ConfigurationManager.ConnectionStrings["SqlServerConnectionString"].ConnectionString;
 
         public List<ModelScheduling> Schedules()
         {
